@@ -1,0 +1,17 @@
+export { default as Login } from "./login/Login";
+export { default as Dashboard } from "./dashboard/Dashboard";
+export { default as Product } from "./products/Product";
+export { default as AddProduct } from "./products/AddProduct";
+export { default as EditProduct } from "./products/EditProduct";
+export { default as SingleProduct } from "./products/SingleProduct";
+export { default as Blogs } from "./blogs/Blogs";
+export { default as AddBlog } from "./blogs/AddBlog";
+export { default as EditBlog } from "./blogs/EditBlog";
+export { default as SingleBlog } from "./blogs/SingleBlog";
+export { default as Event } from "./events/Event";
+export { default as AddEvent } from "./events/AddEvent";
+export { default as EditEvent } from "./events/EditEvent";
+export { default as SingleEvent } from "./events/SingleEvent";
+export { default as Error } from "./error/Error";
+export { default as ForgotPassowrd } from "./login/ForgotPassowrd";
+export { default as ResetPassword } from "./login/ResetPassword";
