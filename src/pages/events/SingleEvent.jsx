@@ -43,7 +43,7 @@ export default function SingleEvent() {
         <img
           src={data.mainImage?.url}
           alt={data.altText}
-          className="md:w-2/3 object-cover rounded-lg max-h-[500px]"
+          className="md:w-2/3 object-cover rounded-lg max-h-125"
         />
       </div>
       <p
@@ -54,7 +54,7 @@ export default function SingleEvent() {
         <img
           src={data.extraImage?.url}
           alt={data.altText}
-          className="object-cover rounded-md my-5 lg:max-w-[900px] mx-auto"
+          className="object-cover rounded-md my-5 lg:max-w-225 mx-auto"
         />
       )}
       {data.bottomContent && (
@@ -63,7 +63,7 @@ export default function SingleEvent() {
           dangerouslySetInnerHTML={{ __html: data.bottomContent }}
         ></p>
       )}
-      <div className="my-5 max-w-[900px] mx-auto">
+      <div className="my-5 max-w-225 mx-auto">
         <Carousel images={data.carouselImages} alt={data.altText} />
       </div>
     </div>

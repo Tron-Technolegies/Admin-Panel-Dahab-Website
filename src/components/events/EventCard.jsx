@@ -33,7 +33,7 @@ export default function EventCard({
 
   return (
     <>
-      <div className="p-3 rounded-md bg-gray-200 shadow md:w-[350px] w-full h-[400px]">
+      <div className="p-3 rounded-md bg-gray-200 shadow md:w-87.5 w-full h-100">
         <img
           src={smallImage ? smallImage?.url : mainImage?.url}
           alt={altText}

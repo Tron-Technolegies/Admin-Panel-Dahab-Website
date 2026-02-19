@@ -13,7 +13,7 @@ export default function Carousel({ images, alt }) {
             <img
               src={item.url}
               alt={alt}
-              className="w-full object-cover h-[500px]"
+              className="w-full object-cover h-125"
             />
           </div>
         ))}
