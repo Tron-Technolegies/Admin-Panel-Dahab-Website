@@ -7,8 +7,9 @@ import { CiUser } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoLogOutOutline } from "react-icons/io5";
 import Loading from "../Loading";
+import { adminNavLinks } from "../../utils/adminNavlinks";
 
-export default function SmallSidebar() {
+export default function SmallSidebar({ setSmall }) {
   const user = useLoaderData();
   const [showLogout, setShowLogout] = useState(false);
   const { logout, loading } = useLogoutUser();
