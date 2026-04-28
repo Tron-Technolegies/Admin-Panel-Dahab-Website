@@ -212,8 +212,8 @@ export default function EditProduct() {
         />
         {/* PRICE */}
         <FormInput
-          title={"Price (AED)"}
-          type={"Number"}
+          title={"Price"}
+          type={"text"}
           name={"price"}
           defaultValue={data?.product?.price}
           admin

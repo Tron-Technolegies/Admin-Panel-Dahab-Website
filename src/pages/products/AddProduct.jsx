@@ -180,8 +180,8 @@ export default function AddProduct() {
         />
         {/* PRICE */}
         <FormInput
-          title={"Price (AED)"}
-          type={"Number"}
+          title={"Price"}
+          type={"text"}
           name={"price"}
           admin
           placeholder={"Enter price of product"}
