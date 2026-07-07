@@ -54,6 +54,7 @@ export default function Product() {
           {data?.products?.length > 0 &&
             data?.products?.map((x) => (
               <ProductListItem
+                isOutofStock={x.isOutOfStock}
                 key={x._id}
                 img={x.productImage}
                 name={x.productName}

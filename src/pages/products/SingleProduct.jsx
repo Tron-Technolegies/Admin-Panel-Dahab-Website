@@ -41,6 +41,7 @@ export default function SingleProduct() {
         img={data?.product?.productImage}
         name={data?.product?.productName}
         price={data?.product?.price}
+        isOutOfStock={data?.product?.isOutOfStock}
       />
       <ProductDetails
         hash={data?.product?.hashRate}

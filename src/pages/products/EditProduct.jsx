@@ -9,6 +9,7 @@ import FormInput from "../../components/FormInput";
 import ProductImageUpload from "../../components/products/ProductImageUpload";
 import FormSelect from "../../components/FormSelect";
 import { cryptoCurrency, manufacturer } from "../../utils/dropdowns";
+import { toast } from "react-toastify";
 
 export default function EditProduct() {
   const { id } = useParams();
@@ -19,6 +20,7 @@ export default function EditProduct() {
   const [featuredImage, setFeaturedImage] = useState(null);
   const [selectedCoins, setSelectedCoins] = useState([]);
   const [specifications, setSpecifications] = useState([]);
+  const [isOutOfStock, setIsOutOfStock] = useState(false);
   const [faq, setFaq] = useState([]);
   const [schema, setSchema] = useState("");
   const { isPending, editProduct } = useEditProduct();
@@ -68,6 +70,7 @@ export default function EditProduct() {
     formdata.append("faq", JSON.stringify(faq));
     formdata.append("schema", schema);
     formdata.append("cryptoCurrencyItem", JSON.stringify(selectedCoins));
+    formdata.append("isOutOfStock", isOutOfStock);
     editProduct({ id, data: formdata });
   }
 
@@ -79,6 +82,7 @@ export default function EditProduct() {
       setFaq(data?.product?.productFaq);
       setSpecifications(data?.product?.productSpecifications);
       setSchema(data?.product?.productSchema);
+      setIsOutOfStock(data?.product?.isOutOfStock);
     }
   }, [data]);
 
@@ -219,6 +223,15 @@ export default function EditProduct() {
           admin
           placeholder={"Enter price of product"}
         />
+        <div className="flex gap-2 items-center my-3">
+          <label className="text-sm">Out of Stock</label>
+          <input
+            type="checkbox"
+            className=""
+            checked={isOutOfStock}
+            onChange={(e) => setIsOutOfStock(e.target.checked)}
+          />
+        </div>
         {/* FEATURED IMAGE */}
         {exFeaturedImage && (
           <div>

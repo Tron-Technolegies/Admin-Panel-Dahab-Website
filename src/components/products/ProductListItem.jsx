@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ProductListItem({ img, name, id }) {
+export default function ProductListItem({ img, name, id, isOutofStock }) {
   return (
     <div className=" flex justify-between md:px-10 px-1 items-center bg-homeBgGradient rounded-lg my-2 p-3 text-white">
       <div className="flex gap-3 items-center">
@@ -13,12 +13,19 @@ export default function ProductListItem({ img, name, id }) {
 
         <h3>{name}</h3>
       </div>
-      <Link
-        to={`/products/${id}`}
-        className="flex p-2 bg-homeBg rounded-lg hover:bg-blue-500 nav-link"
-      >
-        Details
-      </Link>
+      <div className="flex items-center gap-2">
+        {isOutofStock && (
+          <span className="rounded-full bg-red-600 px-2 py-1 text-xs font-semibold text-white">
+            Out of Stock
+          </span>
+        )}
+        <Link
+          to={`/products/${id}`}
+          className="flex p-2 bg-homeBg rounded-lg hover:bg-blue-500 nav-link"
+        >
+          Details
+        </Link>
+      </div>
     </div>
   );
 }
